@@ -1,12 +1,17 @@
-﻿#if INTERACTIVE
-#r "/path/to/AZROLESLib.dll"
-#endif
+﻿open Game
 
-open Game
+open SFML.Window
+open SFML.Graphics
 
 [<EntryPoint>]
 let main argv = 
 
-    do TransportGame.Init
+    let videoMode = VideoMode(1280u, 720u)
+    let titleText = "Transport Game" 
+
+    use window = new RenderWindow(videoMode, titleText)
+
+
+    do TransportGame.Init window
 
     0

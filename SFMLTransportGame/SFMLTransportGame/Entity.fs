@@ -43,12 +43,6 @@ type EntityData =
     | Truck of TruckData
     | Road of RoadData
 
-type GameState = 
-    {
-        Window  : RenderWindow
-        Entities  : Entity<EntityData> list
-    }
-
 let rec repeat c x =
     match c with
     | Behaviour(cfunc) ->   let x', c' = cfunc x 
