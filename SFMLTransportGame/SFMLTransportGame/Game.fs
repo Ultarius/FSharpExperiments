@@ -20,16 +20,16 @@ let rec TransportGame : Game =
     {   
         Init = fun (window : RenderWindow ) ->
             let factoryData : FactoryData = {FactoryData.Position = new Vector2f(600.0f, 50.0f); RefreshRate = 10; Storage = 0; MaxStorage = 10;}
-            let factory = {Data = factoryData |> EntityData.Factory; Behaviours = []; Render = fun (Factory x) -> new RectangleShape(new Vector2f(50.0f, 85.0f), Position = new Vector2f(x.Position.X, x.Position.Y), FillColor=Color.Red)}
+            let factory = {Data = factoryData |> EntityData.Factory; Behaviours = []; Render = fun (Factory x) -> new RectangleShape(new Vector2f(95.0f, 80.0f), Position = new Vector2f(x.Position.X, x.Position.Y), FillColor=Color.Red)}
 
             let factoryData2 : FactoryData = {FactoryData.Position = new Vector2f(600.0f, 300.0f); RefreshRate = 10; Storage = 0; MaxStorage = 10;}
-            let factory2 = {Data = factoryData2 |> EntityData.Factory; Behaviours = []; Render = fun (Factory x) -> new RectangleShape(new Vector2f(50.0f, 85.0f), Position = new Vector2f(x.Position.X, x.Position.Y), FillColor=Color.Red)}
+            let factory2 = {Data = factoryData2 |> EntityData.Factory; Behaviours = []; Render = fun (Factory x) -> new RectangleShape(new Vector2f(95.0f, 80.0f), Position = new Vector2f(x.Position.X, x.Position.Y), FillColor=Color.Red)}
 
-            let truck = {Data = {Position = new Vector2f(0.0f, 67.0f); Speed = 2.5f; Capacity = 0; MaxCapacity = 300; Arrived = false; Loaded = false; FactoryData = factoryData;} |> EntityData.Truck; Behaviours = [PickupBehaviour; AIBehaviour]; Render = fun (Truck x) -> new RectangleShape(new Vector2f(40.0f, 20.0f), Position = new Vector2f(x.Position.X, x.Position.Y), FillColor=Color.White)}
+            let truck = {Data = {Position = new Vector2f(0.0f, 107.0f); Speed = 2.5f; Capacity = 0; MaxCapacity = 300; Arrived = false; Loaded = false; FactoryData = factoryData;} |> EntityData.Truck; Behaviours = [PickupBehaviour; AIBehaviour]; Render = fun (Truck x) -> new RectangleShape(new Vector2f(40.0f, 20.0f), Position = new Vector2f(x.Position.X, x.Position.Y), FillColor=Color.White)}
         
-            let truck2 = {Data = {Position = new Vector2f(0.0f, 317.0f); Speed = 4.5f; Capacity = 0; MaxCapacity = 300; Arrived = false; Loaded = false; FactoryData = factoryData2;} |> EntityData.Truck; Behaviours = [PickupBehaviour; AIBehaviour]; Render = fun (Truck x) -> new RectangleShape(new Vector2f(40.0f, 20.0f), Position = new Vector2f(x.Position.X, x.Position.Y), FillColor=Color.White)}
+            let truck2 = {Data = {Position = new Vector2f(0.0f, 357.0f); Speed = 4.5f; Capacity = 0; MaxCapacity = 300; Arrived = false; Loaded = false; FactoryData = factoryData2;} |> EntityData.Truck; Behaviours = [PickupBehaviour; AIBehaviour]; Render = fun (Truck x) -> new RectangleShape(new Vector2f(40.0f, 20.0f), Position = new Vector2f(x.Position.X, x.Position.Y), FillColor=Color.White)}
        
-            let roads = (@) (addRoad 11 315.0f) (addRoad 11 65.0f)
+            let roads = (@) (addRoad 11 355.0f) (addRoad 11 105.0f)
 
             do TransportGame.Run {Entities = (@) roads [truck; truck2; factory; factory2];} window
 
