@@ -16,7 +16,6 @@ let main argv =
     
     window.Closed.AddHandler( fun s a -> Environment.Exit 0 ) 
 
-
-    do TransportGame.Init window
+    if window.IsOpen then do TransportGame.Init window
 
     0
