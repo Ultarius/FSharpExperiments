@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFSharpCoreVersion>4.3.1.0</TargetFSharpCoreVersion>
     <Name>SFMLTransportGame</Name>
-    <NuGetPackageImportStamp>ddcae824</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>4e62bd60</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,8 +68,8 @@
     <Compile Include="Game.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
-    <None Include="packages.config" />
     <None Include="ReadMe.md" />
+    <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
